@@ -6,9 +6,7 @@ using namespace std;
 /*
   CALCULATE MINIMUM NUMBER OF COINS NEEDED TO CHANGE [1,2,3,4,5...]
   USING DYNAMIC PROGRAMMING
-
   Formula to find minimum coins to change 'x':
-
   f(x) = min( f(x-coin1)+1,
               f(x-coin2)+1,
               f(x-coin3)+1,
@@ -39,7 +37,7 @@ vector<int> generateSolveTable(int* coin, int coin_length, int coin_to_change) {
     solve[i] = MAX;
     for(int j = 0; j < coin_length ; j++){
       if(i - coin[j] < 0){
-        //assuming the value of coins are sorted
+        //assuming coins are sorted
         break;
       }
       solve[i] = min(solve[i], solve[i - coin[j]] + 1);
@@ -64,7 +62,7 @@ int main() {
   vector<int> numberOfCoinsNeeded = generateSolveTable(coins, lenCoin, x);
 
   for(int i = 0 ; i <= x ; i++){
-    cout << "max change for " << i << ": " << numberOfCoinsNeeded[i] << endl;
+    cout << "min coins needed for $" << i << ": " << numberOfCoinsNeeded[i] << " coins"<< endl;
   }
 
   return 0;
