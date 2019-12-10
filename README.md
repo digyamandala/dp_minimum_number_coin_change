@@ -9,3 +9,5 @@ where
 <img src="https://latex.codecogs.com/gif.latex?(x-coin_n)&space;\geq&space;0" title="(x-coin_n) \geq 0" />
 
 <img src="https://latex.codecogs.com/gif.latex?Time&space;Complexity:&space;O(NK)" title="Time Complexity: O(NK)" />
+where N is the value needed to be changed<br>
+and K is the number of coins in store.
