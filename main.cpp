@@ -16,11 +16,6 @@ using namespace std;
             )
 */
 
-void setToZeroes(int* x) {
-  for(int i = 0 ; i < 100; i++)
-    x[i] = 0;
-}
-
 int min(int a, int b){
   if(a < b)
     return a;
@@ -49,7 +44,6 @@ vector<int> generateSolveTable(int* coin, int coin_length, int coin_to_change) {
 int main() {
 
   int coins[100];
-  setToZeroes(coins);
   coins[0] = 1;
   coins[1] = 3;
   coins[2] = 4;
